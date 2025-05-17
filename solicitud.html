@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Solicitud de Trámite - Conduce EG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .progress {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+        .progress div {
+            flex: 1;
+            text-align: center;
+            padding: 0.5rem;
+            border-bottom: 4px solid #ccc;
+        }
+        .progress .active {
+            font-weight: bold;
+            border-color: #0b3d91;
+        }
+        h2 {
+            color: #0b3d91;
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 0.6rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-options {
+            margin-top: 0.5rem;
+        }
+        .form-options label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: #0b3d91;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #124cb3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">
+            <div class="active">1<br><small>Tipo de Trámite</small></div>
+            <div>2<br><small>Datos del Solicitante</small></div>
+            <div>3<br><small>Documentos</small></div>
+            <div>4<br><small>Confirmación</small></div>
+        </div>
+        <h2>Tipo de Trámite</h2>
+        <form>
+            <div class="form-options">
+                <label><input type="radio" name="tramite" value="nuevo" checked> Permiso de conducir nuevo</label>
+                <label><input type="radio" name="tramite" value="renovacion"> Renovación de permiso de conducir</label>
+                <label><input type="radio" name="tramite" value="vehicular"> Documentación vehicular</label>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+                <label for="id">Número de Identificación</label>
+                <input type="text" id="id" name="id" required />
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+240..." required />
+            </div>
+            <button type="submit" class="btn">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>
