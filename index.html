@@ -6,39 +6,67 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hero {
+            background-image: url('images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero .cta-button {
+            background-color: #0b3d91;
+            color: white;
+            padding: 0.9rem 2rem;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .hero .cta-button:hover {
+            background-color: #124cb3;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-container">
             <img src="images/logo_conduce_eg.png" alt="Logo Ministerio" class="logo">
-            <h1>Plataforma Conduce EG</h1>
+            <h1>Conduce EG</h1>
             <a href="index-en.html" class="lang-toggle">EN</a>
         </div>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Solicitar Trámite</a>
-            <a href="#">Consultar Estado</a>
-            <a href="#">FAQ</a>
-        </nav>
     </header>
-    <main>
-        <section class="intro">
-            <h2>Digitalización de Permisos y Documentación Vehicular</h2>
-            <p>Una solución moderna, transparente y accesible impulsada por el Ministerio del Interior de Guinea Ecuatorial.</p>
-            <a href="#" class="cta-button">Iniciar Solicitud</a>
-        </section>
-        <section class="info">
-            <h3>¿Por qué usar Conduce EG?</h3>
-            <ul>
-                <li>Evita desplazamientos innecesarios</li>
-                <li>Haz seguimiento de tus solicitudes en tiempo real</li>
-                <li>Recibe notificaciones claras y oportunas</li>
-                <li>Mayor transparencia y seguridad de tus datos</li>
-            </ul>
-        </section>
-    </main>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Adelante – Conduce EG</h1>
+            <p>Tu portal digital para licencias y documentación vehicular</p>
+            <a href="#" class="cta-button">Portal Conduce EG</a>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Ministerio del Interior y Corporaciones Locales – República de Guinea Ecuatorial</p>
+        <p>&copy; 2025 Ministerio del Interior y Corporaciones Locales - República de Guinea Ecuatorial</p>
     </footer>
 </body>
 </html>
